@@ -41,12 +41,11 @@ var pigay = "ay";
 var output = userinput + pigay;
 
 $(document).ready(function(){
-
   $("#oink").submit(function(event){
     event.preventDefault();
     userinput = $("#pigtext").val();
 
-    if (userinput.length > 0 && userinput.match(/^[a-zA-Z][a-zA-Z]+$/) != null){
+    if (userinput.length > 0 && userinput.match(/^[a-zA-Z][a-zA-Z]+$/) + (/^[\s][\s]+$/) ){
       // $(".results");
       var vowels = ["a", "e", "i", "o", "u"];
       var first = userinput.slice(0,1);
